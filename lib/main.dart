@@ -7,6 +7,8 @@ import 'detail_page.dart';  // 추가된 import
 // flutter pub get
 // flutter run
 
+// flutter run -d chrome  웹으로 실행
+
 
 void main() {
   runApp(const MyApp());
