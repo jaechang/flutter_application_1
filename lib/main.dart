@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'detail_page.dart';  // 추가된 import
+import 'chat_page.dart';  // 추가
 
 
 // 아래 명령어로 빌드 오류 해결
@@ -8,6 +9,7 @@ import 'detail_page.dart';  // 추가된 import
 // flutter run
 
 // flutter run -d chrome  웹으로 실행
+// 하 어이없게 git pages에서 빌드만 따로 셋팅해줘야 했음
 
 
 void main() {
@@ -112,13 +114,24 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: const Icon(Icons.info),
               title: const Text('상세 페이지'),
               onTap: () {
-                print('상세 페이지 탭됨');
                 Navigator.pop(context);
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const DetailPage(),
                   ),
-                ).then((_) => print('상세 페이지로 이동 완료'));
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.chat),
+              title: const Text('채팅'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const ChatPage(),
+                  ),
+                );
               },
             ),
             ListTile(
